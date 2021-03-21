@@ -1,0 +1,20 @@
+type Query {
+    movies(titleFilter: String): [Movie]
+}
+
+type Person {
+    name: String
+    born: Int
+}
+
+type Movie {
+    title: String
+    tagline: String
+    directors: [Person]
+    actors: [Role]
+}
+
+type Role {
+    actor: Person
+    roles: [String]
+}
